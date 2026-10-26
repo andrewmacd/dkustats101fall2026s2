@@ -38,8 +38,8 @@ Topics covered:
 
 ## Online lab 1.1 (due Sunday, November 1 at 11:59:00 pm)
 
--   Introduction to R
--   Introduction to the Tidyverse
+-   [Introduction to R](https://app.datacamp.com/learn/courses/free-introduction-to-r)
+-   [Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
 
 ## Lecture 1.3: Comparing distributions and the Normal distribution (Monday, November 2)
 
@@ -64,7 +64,7 @@ Topics covered:
 
 ## Online lab 1.2 (due on Friday, November 6 at 23:59:00)
 
--   Introduction to Data Visualization with ggplot2
+-   [Introduction to Data Visualization with ggplot2](https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2)
 
 ## Unit 1 homework (due Sunday, November 8 23:59:00 pm)
 
@@ -130,7 +130,7 @@ Topics covered:
 
 ## Online lab 2.2 (due on Friday, November 13 at 23:59:00)
 
--   Intermediate Data Visualization with ggplot2
+-   [Intermediate Data Visualization with ggplot2](https://app.datacamp.com/learn/courses/intermediate-data-visualization-with-ggplot2)
 
 ## Unit 2 homework - progress check (due Sunday, November 15 at 23:59:00)
 
