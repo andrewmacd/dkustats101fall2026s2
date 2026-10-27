@@ -13,8 +13,8 @@ webr:
   packages:
     - tidyverse
   resources:
-    - https://raw.githubusercontent.com/andrewmacd/dkustats101fall2026s1/main/lectures/datasets/classroster.csv
-    - https://raw.githubusercontent.com/andrewmacd/dkustats101fall2026s1/main/lectures/datasets/lifeexp.csv
+    - https://raw.githubusercontent.com/andrewmacd/dkustats101fall2026s2/main/lectures/datasets/classroster.csv
+    - https://raw.githubusercontent.com/andrewmacd/dkustats101fall2026s2/main/lectures/datasets/lifeexp.csv
 ---
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
