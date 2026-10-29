@@ -1,0 +1,368 @@
+---
+title: "Unit 1 homework instructions"
+date: today
+date-format: "MMMM D, YYYY"
+subtitle: DKU Stats 101 Fall 2026 S2
+format:
+  html
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+
+# Make sure that your data file is in the same location as where you have saved this document
+lego <- read.csv("lego_sets_1975_2025.csv")
+
+# Put any other setup code here
+```
+
+![](lego.jpg)
+
+[The data](https://www.kaggle.com/datasets/abdurrahmanhakanacar/lego-sets-themes-and-minifigures-1975-2025?select=lego_sets_1975_2025.csv) is sourced from user `abdurrahmanhakanacar` on Kaggle. You can find variable definitions at the link.
+
+# Scoring guide 
+
+## Content
+
+### Length and presentation guidelines
+
+Aim for approximately 1,500–1,800 words of written explanation, with a maximum of 2,000 words for the assignment. There is no minimum length: a shorter response can earn full credit if it answers the questions clearly and supports its conclusions with evidence.
+
+As a guide, allow approximately:
+
+- Question 1: 450 words
+- Question 2: 700 words
+- Question 3: 350 words
+- Question 4: 500 words
+
+You may redistribute words across questions while staying within the overall limit.
+
+- The word count includes your Think and Tell responses, explanatory sentences in Show, and explanations in captions or tables. It excludes code, numerical table contents, headings, figure labels, and references. Include an approximate word count at the end each question.
+- Write focused responses. Most individual prompts can be answered in one to three sentences. Use specific numbers or features from your displays to support your answer. You do not need to describe every value in a table.
+- Keep the report organized and compact.
+- Retain the question numbers and Think–Show–Tell headings; remove the full assignment instructions.
+- Combine graphs that compare themes into one clearly labeled figure where appropriate.
+- Refer back to earlier tables and figures instead of reproducing them.
+- Show one final extended table for 3b–3c.
+- Include the main investigation and one small follow-up for Question 4.
+- Keep full dataset printouts, repeated intermediate output, and unused exploratory plots out of the rendered report.
+- Show the calculation code required for Question 3. Keep all analysis code in your submitted .qmd file.
+
+**Your work will be assessed on the accuracy of the analysis, the relevance of the evidence, and the clarity of your reasoning. Additional length or additional displays do not earn additional credit.**
+
+### Technical guidelines
+
+- Make sure your graphs are produced using `ggplot()`, are well labeled, and are easy to read. Using `ggplot()` is a requirement.
+- Make sure your tables are produced with the `kable()` function from the `knitr` package, are well labeled, and are easy to read. You can make your tables prettier with the `kableExtra` package. Using `kable()` is a requirement.
+- **Do not include more advanced statistics or tests beyond what he have learned in class**. If you want to use these kind of tests and are sure you understand how to use them appropriately, you can message or meet with me and explain your reason for wanting to use them and then receive special permission. Otherwise, stick to what we have learned in class!
+- Make sure you do not have anything rendered in your HTML file besides your results and, when asked for by a question, your code. That means no warnings, messages, or other unnecessary output should appear in your final rendered HTML file.
+
+### Homework check: complete all of the Think sections of Q1-Q3 of the homework before Thursday, November 5th at 11:59 pm.
+### Final submission: due Sunday, November 8th at 11:59 pm. Submit a rendered version of the full homework and also your file from the homework check.
+
+# Questions
+
+## Question 1: Displaying and describing the data (25 points)
+
+### 1a. What does the distribution of LEGO set sizes look like?
+
+> Think
+
+- What does `num_parts` measure? Is it categorical or quantitative?
+
+- Before looking at the distribution, predict its shape. Do you expect a roughly symmetric distribution, a longer tail toward larger sets, or a longer tail toward smaller sets? Explain your reasoning.
+
+> Show
+
+Create your graph with clearly labeled axes and a descriptive title.
+
+Also make a table with `kable()` and report:
+
+- The number of sets with a recorded value for `num_parts`.
+- The median number of parts.
+- The first and third quartiles, Q1 and Q3.
+- The interquartile range, IQR.
+
+> Tell
+
+Answer these questions separately:
+
+- What shape do you observe? Describe the distribution and identify a feature of your graph that supports your description.
+- What sizes are common in this dataset? 
+- How did your results compare with your prediction?
+
+### 1b. How do set sizes differ among three themes?
+
+Compare `num_parts` for these three `parent_theme` values:
+
+- `Harry Potter`
+- `Star Wars`
+- `Super Heroes Marvel`
+
+Use `filter()` to create the subset for this investigation.
+
+> Think
+
+Before calculating the summaries or making the displays:
+
+- Predict which theme will have the largest median number of parts.
+- Predict which theme will have the greatest spread in set sizes.
+
+You should provide some brief evidence or reasoning explaining your thinking. You should examine a few example sets from each theme to develop your thinking. 
+
+> Show
+
+- Create a display with three histogram that allows you to compare the three distributions. 
+- Make a table using `kable()` showing the number of sets, median, Q1, Q3, and IQR for each theme.
+
+> Tell
+
+- Which theme has the largest typical set size? Compare the medians. Identify the themes with the largest and smallest medians and report the difference between them in parts.
+
+- Which theme has the greatest spread in the middle 50% of its sets? Compare the IQRs and support your answer with their values.
+
+- What else does your display reveal? Identify one feature beyond the medians and IQRs, such as unusually large sets, a long tail, or overlap between the themes. Explain what that feature tells you about set sizes.
+
+- Does the information in the table provide enough information to capture the key features of the distribution of each set? Which set has features that are least well captured by the information in your table?
+
+- Were your predictions supported? Evaluate your predictions about typical size and spread separately, using evidence from your results.
+
+**FINAL WORD COUNT OF Q1 (including only text written as a response, not question text): ______**
+
+## Question 2: Comparing groups (25 points)
+
+### 2a. How common are minifigures in each theme?
+
+Compare whether sets include minifigures for these four `parent_theme` values:
+
+- `City`
+- `Ninjago`
+- `Creator`
+- `Technic`
+
+Use filter() to create the subset for this investigation.
+
+> Think
+
+Before creating your contingency table:
+
+- What does `has_minifigs` record? Are `parent_theme` and `has_minifigs` categorical or quantitative variables?
+- Predict which theme will have the highest percentage of sets with minifigures and which will have the lowest. You should do some brief research about the sets and provide some evidence from your research. 
+- Why would percentages within each theme be useful for this comparison, especially if the themes contain different numbers of sets?
+
+> Show
+
+Create a contingency table with:
+
+- `parent_theme` as the rows.
+- `has_minifigs` as the columns.
+
+Show both the number of sets and the percentage within each theme that have minifigures and that do not. The two percentages should add to 100% for each theme.
+
+Include the total number of sets used for each theme. If any sets have missing values for has_minifigs, report how many you excluded.
+
+> Tell
+
+Answer these questions separately:
+
+- Which theme has the highest percentage of sets with minifigures? Identify the themes with the highest and lowest percentages. Report both percentages and the difference between them in percentage points.
+
+- Does minifigure inclusion appear to be associated with theme? Explain whether the percentages are similar across the four themes or differ noticeably. Support your answer with specific percentages from your table.
+
+- Were your predictions supported? Evaluate your predictions about the highest and lowest percentages separately, using evidence from your results.
+
+### 2b. How does the number of minifigures vary by theme?
+
+Using the same four themes, investigate the distribution of `num_minifigs`.
+
+Include sets with zero minifigures in this analysis.
+
+> Think
+
+Before calculating the summaries or making the display:
+
+- What does `num_minifigs` measure? Is it categorical or quantitative?
+- Predict which theme will have the largest median number of minifigures.
+- Predict which theme will have the greatest spread in the middle 50% of its minifigure counts.
+
+Give a brief reason (you should do some short research about the sets) for each prediction and choose a display that will allow you to compare the four distributions.
+
+> Show
+
+- Create a display that allows you to compare the four distributions directly.
+- Use a common `num_minifigs` scale across the themes. 
+
+Make a table showing the following for each theme:
+
+- The number of sets with a recorded value for `num_minifigs`.
+- The mean and median.
+- The first and third quartiles, Q1 and Q3.
+- The standard deviation and interquartile range, IQR.
+
+> Tell
+
+Answer these questions separately:
+
+- Which theme has the largest typical minifigure count? Compare the mean and medians. Identify the themes with the largest and smallest medians and report their values. Report any ties. 
+
+- Which theme has the greatest spread in the middle 50% of its counts? Compare the standard deviation and IQRs. Identify the largest and smallest IQRs and support your answer with their values. Report any ties.
+
+- What else does your display reveal? Identify one feature beyond the medians and IQRs, such as a concentration of sets at zero, a long tail, or a few sets with unusually many minifigures. Name the theme and refer to specific values or ranges in your display.
+
+Were your predictions supported? Evaluate your predictions about the center and spread separately, using evidence from your results.
+
+### 2c. Which theme would you recommend?
+
+Imagine you are advising someone who is interested in LEGO minifigures. Choose two of the four themes and investigate this claim:
+
+“For someone interested in minifigures, ______ is a better choice than ______.”
+
+> Think
+
+Define what you mean by “better.” For example, do you mean a greater percentage of sets containing any minifigures, more minifigures in a typical set, or a more consistent number of minifigures? Explain why you chose your criterion and these two themes.
+
+> Show
+
+Evaluate your claim using your results from both 2a and 2b. Include:
+
+- The percentage of sets with minifigures in each of your two themes.
+
+- A specific feature of the distributions of num_minifigs that matters to your recommendation. Identify or annotate that feature on your display.
+
+- One actual set from your dataset that illustrates the pattern or makes it less straightforward. Give its `set_num`, `name`, and `num_minifigs`, and explain why you selected it.
+
+> Tell
+
+- State your recommendation and explain how your evidence supports it. Would changing the priority from “getting any minifigures” to “getting more minifigures” change your recommendation? Explain why or why not.
+
+- Identify one qualification or limitation a reader should keep in mind. 
+
+**FINAL WORD COUNT OF Q2 (including only text written as a response, not question text): ______**
+
+## Question 3: What makes your chosen theme distinctive? (25 points)
+
+Show your code for all calculations using the #| echo: true code block option.
+
+### 3a. Choose a theme and make a prediction
+
+Use `filter()` to select a parent_theme with at least 50 sets, excluding any of the previously discussed themes. Report the theme you selected and its number of sets (the `n`).
+
+Before calculating the averages, predict which of these variables will differ most from the overall dataset after accounting for the variables’ different scales:
+
+`num_parts`
+
+`num_unique_colors`
+
+`num_minifigs`
+
+For your predicted variable, do you expect the theme average to be above or below the overall average? Explain what about the theme led you to this prediction.
+
+Your prediction does not need to be correct. The goal is to explain your reasoning and then evaluate it using data.
+
+### 3b. Calculate the averages
+
+Create a table comparing your theme with the full dataset for the three variables above. Include:
+
+The mean for your selected theme.
+
+The mean for the full dataset.
+
+The number of nonmissing observations used for each mean.
+
+### 3c. Express the differences in standard deviation units
+
+Extend your table to include the overall standard deviation and the standardized difference for each variable:
+
+$\frac{Theme\space mean-Overall\space mean}{Overall\space standard\space deviation}$
+
+Calculate each overall mean and standard deviation using the individual sets in the original, full dataset, including your selected theme.
+
+Identify which variable has the largest absolute standardized difference.
+
+### 3d. Investigate your strongest result
+
+> Think
+
+Compare your results with your prediction from 3a. Explain what the sign and magnitude of your largest absolute standardized difference tell you about the theme’s average.
+
+> Show
+
+For the variable with the largest absolute standardized difference:
+
+- Find the set in your theme with the highest observed value. Report its `set_num`, `name`, and `value`. If several sets tie, choose one.
+
+- In a temporary subset, exclude only that one set and recalculate the theme mean and standardized difference.
+
+- Keep the original overall mean and overall standard deviation fixed.
+
+- Show the original and recalculated results side by side.
+
+*This is called sensitivity analysis: it is check of how much one observation affects your summary. It is not a reason to delete the set from the original dataset.*
+
+> Tell
+
+Explain how much your result changed and whether that changes your interpretation. Support your explanation with the original and recalculated values.
+
+### 3e. Concluding thoughts
+
+Suppose another student asks:
+
+“Are sets in this theme similar to most other Lego sets or not?”
+
+Can your theme mean and standardized difference comparisons in 3c answer that question? Explain why or why not. Name one additional graph or summary statistic that would help you answer it. You do not need to calculate it.
+
+**FINAL WORD COUNT OF Q3 (including only text written as a response, not question text): ______**
+
+## Question 4: Your own investigation (25 points)
+
+Choose a question that you can answer using the LEGO dataset. Your investigation should add something you have not already answered in Questions 1–3. You may build on an earlier finding, explore a different variable, or make a new comparison.
+
+Keep your investigation focused: answer one main question, then take one small additional step to examine something you notice in your results. Use the statistical methods you have practiced in the previous questions.
+
+> Think: Plan your investigation
+
+Complete this section before creating the graph or table for your new investigation. Keep your original prediction when you write your Tell responses.
+
+**What question will you investigate?**: Write one specific question. Identify the variables you will use and which sets or groups you will include.
+
+**What made you choose this question?**: Refer to a specific observation from your earlier work or something you noticed while looking through the dataset. Explain what it made you curious about.
+
+**What do you expect to find?**: Make a prediction and give a brief reason. Your prediction does not need to be correct.
+
+**How will you investigate it?**: Choose a graph or table and explain how it will help you answer your question.
+
+>Show: Investigate and take a closer look
+
+1. Investigate your main question.
+
+Use `filter()` if you need to create a subset of the data. Produce an appropriate graph or table, with clear labels.
+
+Include numerical summaries that help answer your question. For example, you might use medians and IQRs when comparing quantitative variables, or percentages within each group when comparing categorical variables. Report the number of sets used in each group.
+
+2. Choose one small follow-up based on your results.
+
+Look at your first graph or table and identify something you would like to examine more closely. Introduce your follow-up by completing this statement:
+
+“I noticed __________ in my results, so I decided to check __________.”
+
+Choose one additional step. For example, you could:
+
+- Examine the distribution within one group more closely.
+- Check whether a comparison gives a similar result when you include only sets from one theme or a clearly defined time period.
+- Look up a set with an unusually high or low value and compare it with the median for its group. If you choose this option, report its set_num, name, and the value you are investigating.
+
+You may choose another small follow-up that fits your question. Show the additional graph, table, or calculation you used and its result.
+
+> Tell: Explain what you learned
+
+Answer these questions separately:
+
+- What is your answer to your main question? State your conclusion and support it with at least two specific numbers or clearly identified features from your graph or table.
+- How did your results compare with your prediction? Explain what agreed with or differed from your expectation. Refer to a specific result.
+- What did your follow-up add? State what you found when you took a closer look. Did you keep your first conclusion, add an exception, or change your conclusion? Explain using evidence from the follow-up. It is acceptable for the follow-up to confirm your first conclusion.
+- What is one thing your investigation still leaves unanswered? Write one specific question that your results cannot answer yet. Identify the additional information or comparison you would need to answer it. You do not need to carry out this additional analysis.
+
+**FINAL WORD COUNT OF Q4 (including only text written as a response, not question text): ______**
