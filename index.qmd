@@ -72,7 +72,7 @@ We will be using two different online tools for this class, you will need to sig
 
 1.  [R and RStudio](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu): These software packages that implement the R statistical programming language are free and very popular tools for conducting statistical investigations, including all of the homeworks for this class.
     -   [Quarto](https://quarto.org/docs/computations/r.html): Quarto is a flexible document formatting standard that allows you to create nice looking documents that easily mix text and R code output (I made this website with Quarto - you can view the code [here](https://github.com/andrewmacd/dkustats101fall2026s2)). All your homeworks, midterm, and final projects will be written inside of Quarto documents. Instructions on how to use the Quarto syntax will be provided with the first homework assignment.
-2.  [DataCamp]: DataCamp has a lot of very useful tutorials that will help you learn how to code in R.
+2.  [DataCamp](https://www.datacamp.com/groups/shared_links/7d61c4ed9a7fa02d1a63c87eca1227cfa95c255ce041529648287125418fdf14): DataCamp has a lot of very useful tutorials that will help you learn how to code in R.
 
 # Required texts
 
