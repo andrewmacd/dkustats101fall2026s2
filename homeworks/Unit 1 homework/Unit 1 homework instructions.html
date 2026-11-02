@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-10-29">
+
+<title>Unit 1 homework instructions</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Unit 1 homework instructions_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Unit 1 homework instructions_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Unit 1 homework instructions_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Unit 1 homework instructions_files/libs/quarto-html/popper.min.js"></script>
+<script src="Unit 1 homework instructions_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Unit 1 homework instructions_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Unit 1 homework instructions_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Unit 1 homework instructions_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Unit 1 homework instructions_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Unit 1 homework instructions_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Unit 1 homework instructions_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Unit 1 homework instructions</h1>
+<p class="subtitle lead">DKU Stats 101 Fall 2026 S2</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 29, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="lego.jpg" class="img-fluid"></p>
+<p><a href="https://www.kaggle.com/datasets/abdurrahmanhakanacar/lego-sets-themes-and-minifigures-1975-2025?select=lego_sets_1975_2025.csv">The data</a> is sourced from user <code>abdurrahmanhakanacar</code> on Kaggle. You can find variable definitions at the link.</p>
+<section id="scoring-guide" class="level1">
+<h1>Scoring guide</h1>
+<section id="content" class="level2">
+<h2 class="anchored" data-anchor-id="content">Content</h2>
+<section id="length-and-presentation-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="length-and-presentation-guidelines">Length and presentation guidelines</h3>
+<p>Aim for approximately 1,500–1,800 words of written explanation, with a maximum of 2,000 words for the assignment. There is no minimum length: a shorter response can earn full credit if it answers the questions clearly and supports its conclusions with evidence.</p>
+<p>As a guide, allow approximately:</p>
+<ul>
+<li>Question 1: 450 words</li>
+<li>Question 2: 700 words</li>
+<li>Question 3: 350 words</li>
+<li>Question 4: 500 words</li>
+</ul>
+<p>You may redistribute words across questions while staying within the overall limit.</p>
+<ul>
+<li>The word count includes your Think and Tell responses, explanatory sentences in Show, and explanations in captions or tables. It excludes code, numerical table contents, headings, figure labels, and references. Include an approximate word count at the end each question.</li>
+<li>Write focused responses. Most individual prompts can be answered in one to three sentences. Use specific numbers or features from your displays to support your answer. You do not need to describe every value in a table.</li>
+<li>Keep the report organized and compact.</li>
+<li>Retain the question numbers and Think–Show–Tell headings; remove the full assignment instructions.</li>
+<li>Combine graphs that compare themes into one clearly labeled figure where appropriate.</li>
+<li>Refer back to earlier tables and figures instead of reproducing them.</li>
+<li>Show one final extended table for 3b–3c.</li>
+<li>Include the main investigation and one small follow-up for Question 4.</li>
+<li>Keep full dataset printouts, repeated intermediate output, and unused exploratory plots out of the rendered report.</li>
+<li>Show the calculation code required for Question 3. Keep all analysis code in your submitted .qmd file.</li>
+</ul>
+<p><strong>Your work will be assessed on the accuracy of the analysis, the relevance of the evidence, and the clarity of your reasoning. Additional length or additional displays do not earn additional credit.</strong></p>
+</section>
+<section id="technical-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="technical-guidelines">Technical guidelines</h3>
+<ul>
+<li>Make sure your graphs are produced using <code>ggplot()</code>, are well labeled, and are easy to read. Using <code>ggplot()</code> is a requirement.</li>
+<li>Make sure your tables are produced with the <code>kable()</code> function from the <code>knitr</code> package, are well labeled, and are easy to read. You can make your tables prettier with the <code>kableExtra</code> package. Using <code>kable()</code> is a requirement.</li>
+<li><strong>Do not include more advanced statistics or tests beyond what he have learned in class</strong>. If you want to use these kind of tests and are sure you understand how to use them appropriately, you can message or meet with me and explain your reason for wanting to use them and then receive special permission. Otherwise, stick to what we have learned in class!</li>
+<li>Make sure you do not have anything rendered in your HTML file besides your results and, when asked for by a question, your code. That means no warnings, messages, or other unnecessary output should appear in your final rendered HTML file.</li>
+</ul>
+</section>
+<section id="homework-check-complete-all-of-the-think-sections-of-q1-q3-of-the-homework-before-thursday-november-5th-at-1159-pm." class="level3">
+<h3 class="anchored" data-anchor-id="homework-check-complete-all-of-the-think-sections-of-q1-q3-of-the-homework-before-thursday-november-5th-at-1159-pm.">Homework check: complete all of the Think sections of Q1-Q3 of the homework before Thursday, November 5th at 11:59 pm.</h3>
+</section>
+<section id="final-submission-due-sunday-november-8th-at-1159-pm.-submit-a-rendered-version-of-the-full-homework-and-also-your-file-from-the-homework-check." class="level3">
+<h3 class="anchored" data-anchor-id="final-submission-due-sunday-november-8th-at-1159-pm.-submit-a-rendered-version-of-the-full-homework-and-also-your-file-from-the-homework-check.">Final submission: due Sunday, November 8th at 11:59 pm. Submit a rendered version of the full homework and also your file from the homework check.</h3>
+</section>
+</section>
+</section>
+<section id="questions" class="level1">
+<h1>Questions</h1>
+<section id="question-1-displaying-and-describing-the-data-25-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-displaying-and-describing-the-data-25-points">Question 1: Displaying and describing the data (25 points)</h2>
+<section id="a.-what-does-the-distribution-of-lego-set-sizes-look-like" class="level3">
+<h3 class="anchored" data-anchor-id="a.-what-does-the-distribution-of-lego-set-sizes-look-like">1a. What does the distribution of LEGO set sizes look like?</h3>
+<blockquote class="blockquote">
+<p>Think</p>
+</blockquote>
+<ul>
+<li><p>What does <code>num_parts</code> measure? Is it categorical or quantitative?</p></li>
+<li><p>Before looking at the distribution, predict its shape. Do you expect a roughly symmetric distribution, a longer tail toward larger sets, or a longer tail toward smaller sets? Explain your reasoning.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>Show</p>
+</blockquote>
+<p>Create your graph with clearly labeled axes and a descriptive title.</p>
+<p>Also make a table with <code>kable()</code> and report:</p>
+<ul>
+<li>The number of sets with a recorded value for <code>num_parts</code>.</li>
+<li>The median number of parts.</li>
+<li>The first and third quartiles, Q1 and Q3.</li>
+<li>The interquartile range, IQR.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Tell</p>
+</blockquote>
+<p>Answer these questions separately:</p>
+<ul>
+<li>What shape do you observe? Describe the distribution and identify a feature of your graph that supports your description.</li>
+<li>What sizes are common in this dataset?</li>
+<li>How did your results compare with your prediction?</li>
+</ul>
+</section>
+<section id="b.-how-do-set-sizes-differ-among-three-themes" class="level3">
+<h3 class="anchored" data-anchor-id="b.-how-do-set-sizes-differ-among-three-themes">1b. How do set sizes differ among three themes?</h3>
+<p>Compare <code>num_parts</code> for these three <code>parent_theme</code> values:</p>
+<ul>
+<li><code>Harry Potter</code></li>
+<li><code>Star Wars</code></li>
+<li><code>Super Heroes Marvel</code></li>
+</ul>
+<p>Use <code>filter()</code> to create the subset for this investigation.</p>
+<blockquote class="blockquote">
+<p>Think</p>
+</blockquote>
+<p>Before calculating the summaries or making the displays:</p>
+<ul>
+<li>Predict which theme will have the largest median number of parts.</li>
+<li>Predict which theme will have the greatest spread in set sizes.</li>
+</ul>
+<p>You should provide some brief evidence or reasoning explaining your thinking. You should examine a few example sets from each theme to develop your thinking.</p>
+<blockquote class="blockquote">
+<p>Show</p>
+</blockquote>
+<ul>
+<li>Create a display with three histogram that allows you to compare the three distributions.</li>
+<li>Make a table using <code>kable()</code> showing the number of sets, median, Q1, Q3, and IQR for each theme.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Tell</p>
+</blockquote>
+<ul>
+<li><p>Which theme has the largest typical set size? Compare the medians. Identify the themes with the largest and smallest medians and report the difference between them in parts.</p></li>
+<li><p>Which theme has the greatest spread in the middle 50% of its sets? Compare the IQRs and support your answer with their values.</p></li>
+<li><p>What else does your display reveal? Identify one feature beyond the medians and IQRs, such as unusually large sets, a long tail, or overlap between the themes. Explain what that feature tells you about set sizes.</p></li>
+<li><p>Does the information in the table provide enough information to capture the key features of the distribution of each set? Which set has features that are least well captured by the information in your table?</p></li>
+<li><p>Were your predictions supported? Evaluate your predictions about typical size and spread separately, using evidence from your results.</p></li>
+</ul>
+<p><strong>FINAL WORD COUNT OF Q1 (including only text written as a response, not question text): ______</strong></p>
+</section>
+</section>
+<section id="question-2-comparing-groups-25-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-comparing-groups-25-points">Question 2: Comparing groups (25 points)</h2>
+<section id="a.-how-common-are-minifigures-in-each-theme" class="level3">
+<h3 class="anchored" data-anchor-id="a.-how-common-are-minifigures-in-each-theme">2a. How common are minifigures in each theme?</h3>
+<p>Compare whether sets include minifigures for these four <code>parent_theme</code> values:</p>
+<ul>
+<li><code>City</code></li>
+<li><code>Ninjago</code></li>
+<li><code>Creator</code></li>
+<li><code>Technic</code></li>
+</ul>
+<p>Use filter() to create the subset for this investigation.</p>
+<blockquote class="blockquote">
+<p>Think</p>
+</blockquote>
+<p>Before creating your contingency table:</p>
+<ul>
+<li>What does <code>has_minifigs</code> record? Are <code>parent_theme</code> and <code>has_minifigs</code> categorical or quantitative variables?</li>
+<li>Predict which theme will have the highest percentage of sets with minifigures and which will have the lowest. You should do some brief research about the sets and provide some evidence from your research.</li>
+<li>Why would percentages within each theme be useful for this comparison, especially if the themes contain different numbers of sets?</li>
+</ul>
+<blockquote class="blockquote">
+<p>Show</p>
+</blockquote>
+<p>Create a contingency table with:</p>
+<ul>
+<li><code>parent_theme</code> as the rows.</li>
+<li><code>has_minifigs</code> as the columns.</li>
+</ul>
+<p>Show both the number of sets and the percentage within each theme that have minifigures and that do not. The two percentages should add to 100% for each theme.</p>
+<p>Include the total number of sets used for each theme. If any sets have missing values for has_minifigs, report how many you excluded.</p>
+<blockquote class="blockquote">
+<p>Tell</p>
+</blockquote>
+<p>Answer these questions separately:</p>
+<ul>
+<li><p>Which theme has the highest percentage of sets with minifigures? Identify the themes with the highest and lowest percentages. Report both percentages and the difference between them in percentage points.</p></li>
+<li><p>Does minifigure inclusion appear to be associated with theme? Explain whether the percentages are similar across the four themes or differ noticeably. Support your answer with specific percentages from your table.</p></li>
+<li><p>Were your predictions supported? Evaluate your predictions about the highest and lowest percentages separately, using evidence from your results.</p></li>
+</ul>
+</section>
+<section id="b.-how-does-the-number-of-minifigures-vary-by-theme" class="level3">
+<h3 class="anchored" data-anchor-id="b.-how-does-the-number-of-minifigures-vary-by-theme">2b. How does the number of minifigures vary by theme?</h3>
+<p>Using the same four themes, investigate the distribution of <code>num_minifigs</code>.</p>
+<p>Include sets with zero minifigures in this analysis.</p>
+<blockquote class="blockquote">
+<p>Think</p>
+</blockquote>
+<p>Before calculating the summaries or making the display:</p>
+<ul>
+<li>What does <code>num_minifigs</code> measure? Is it categorical or quantitative?</li>
+<li>Predict which theme will have the largest median number of minifigures.</li>
+<li>Predict which theme will have the greatest spread in the middle 50% of its minifigure counts.</li>
+</ul>
+<p>Give a brief reason (you should do some short research about the sets) for each prediction and choose a display that will allow you to compare the four distributions.</p>
+<blockquote class="blockquote">
+<p>Show</p>
+</blockquote>
+<ul>
+<li>Create a display that allows you to compare the four distributions directly.</li>
+<li>Use a common <code>num_minifigs</code> scale across the themes.</li>
+</ul>
+<p>Make a table showing the following for each theme:</p>
+<ul>
+<li>The number of sets with a recorded value for <code>num_minifigs</code>.</li>
+<li>The mean and median.</li>
+<li>The first and third quartiles, Q1 and Q3.</li>
+<li>The standard deviation and interquartile range, IQR.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Tell</p>
+</blockquote>
+<p>Answer these questions separately:</p>
+<ul>
+<li><p>Which theme has the largest typical minifigure count? Compare the mean and medians. Identify the themes with the largest and smallest medians and report their values. Report any ties.</p></li>
+<li><p>Which theme has the greatest spread in the middle 50% of its counts? Compare the standard deviation and IQRs. Identify the largest and smallest IQRs and support your answer with their values. Report any ties.</p></li>
+<li><p>What else does your display reveal? Identify one feature beyond the medians and IQRs, such as a concentration of sets at zero, a long tail, or a few sets with unusually many minifigures. Name the theme and refer to specific values or ranges in your display.</p></li>
+</ul>
+<p>Were your predictions supported? Evaluate your predictions about the center and spread separately, using evidence from your results.</p>
+</section>
+<section id="c.-which-theme-would-you-recommend" class="level3">
+<h3 class="anchored" data-anchor-id="c.-which-theme-would-you-recommend">2c. Which theme would you recommend?</h3>
+<p>Imagine you are advising someone who is interested in LEGO minifigures. Choose two of the four themes and investigate this claim:</p>
+<p>“For someone interested in minifigures, ______ is a better choice than ______.”</p>
+<blockquote class="blockquote">
+<p>Think</p>
+</blockquote>
+<p>Define what you mean by “better.” For example, do you mean a greater percentage of sets containing any minifigures, more minifigures in a typical set, or a more consistent number of minifigures? Explain why you chose your criterion and these two themes.</p>
+<blockquote class="blockquote">
+<p>Show</p>
+</blockquote>
+<p>Evaluate your claim using your results from both 2a and 2b. Include:</p>
+<ul>
+<li><p>The percentage of sets with minifigures in each of your two themes.</p></li>
+<li><p>A specific feature of the distributions of num_minifigs that matters to your recommendation. Identify or annotate that feature on your display.</p></li>
+<li><p>One actual set from your dataset that illustrates the pattern or makes it less straightforward. Give its <code>set_num</code>, <code>name</code>, and <code>num_minifigs</code>, and explain why you selected it.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>Tell</p>
+</blockquote>
+<ul>
+<li><p>State your recommendation and explain how your evidence supports it. Would changing the priority from “getting any minifigures” to “getting more minifigures” change your recommendation? Explain why or why not.</p></li>
+<li><p>Identify one qualification or limitation a reader should keep in mind.</p></li>
+</ul>
+<p><strong>FINAL WORD COUNT OF Q2 (including only text written as a response, not question text): ______</strong></p>
+</section>
+</section>
+<section id="question-3-what-makes-your-chosen-theme-distinctive-25-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-what-makes-your-chosen-theme-distinctive-25-points">Question 3: What makes your chosen theme distinctive? (25 points)</h2>
+<p>Show your code for all calculations using the #| echo: true code block option.</p>
+<section id="a.-choose-a-theme-and-make-a-prediction" class="level3">
+<h3 class="anchored" data-anchor-id="a.-choose-a-theme-and-make-a-prediction">3a. Choose a theme and make a prediction</h3>
+<p>Use <code>filter()</code> to select a parent_theme with at least 50 sets, excluding any of the previously discussed themes. Report the theme you selected and its number of sets (the <code>n</code>).</p>
+<p>Before calculating the averages, predict which of these variables will differ most from the overall dataset after accounting for the variables’ different scales:</p>
+<p><code>num_parts</code></p>
+<p><code>num_unique_colors</code></p>
+<p><code>num_minifigs</code></p>
+<p>For your predicted variable, do you expect the theme average to be above or below the overall average? Explain what about the theme led you to this prediction.</p>
+<p>Your prediction does not need to be correct. The goal is to explain your reasoning and then evaluate it using data.</p>
+</section>
+<section id="b.-calculate-the-averages" class="level3">
+<h3 class="anchored" data-anchor-id="b.-calculate-the-averages">3b. Calculate the averages</h3>
+<p>Create a table comparing your theme with the full dataset for the three variables above. Include:</p>
+<p>The mean for your selected theme.</p>
+<p>The mean for the full dataset.</p>
+<p>The number of nonmissing observations used for each mean.</p>
+</section>
+<section id="c.-express-the-differences-in-standard-deviation-units" class="level3">
+<h3 class="anchored" data-anchor-id="c.-express-the-differences-in-standard-deviation-units">3c. Express the differences in standard deviation units</h3>
+<p>Extend your table to include the overall standard deviation and the standardized difference for each variable:</p>
+<p><span class="math inline">\(\frac{Theme\space mean-Overall\space mean}{Overall\space standard\space deviation}\)</span></p>
+<p>Calculate each overall mean and standard deviation using the individual sets in the original, full dataset, including your selected theme.</p>
+<p>Identify which variable has the largest absolute standardized difference.</p>
+</section>
+<section id="d.-investigate-your-strongest-result" class="level3">
+<h3 class="anchored" data-anchor-id="d.-investigate-your-strongest-result">3d. Investigate your strongest result</h3>
+<blockquote class="blockquote">
+<p>Think</p>
+</blockquote>
+<p>Compare your results with your prediction from 3a. Explain what the sign and magnitude of your largest absolute standardized difference tell you about the theme’s average.</p>
+<blockquote class="blockquote">
+<p>Show</p>
+</blockquote>
+<p>For the variable with the largest absolute standardized difference:</p>
+<ul>
+<li><p>Find the set in your theme with the highest observed value. Report its <code>set_num</code>, <code>name</code>, and <code>value</code>. If several sets tie, choose one.</p></li>
+<li><p>In a temporary subset, exclude only that one set and recalculate the theme mean and standardized difference.</p></li>
+<li><p>Keep the original overall mean and overall standard deviation fixed.</p></li>
+<li><p>Show the original and recalculated results side by side.</p></li>
+</ul>
+<p><em>This is called sensitivity analysis: it is check of how much one observation affects your summary. It is not a reason to delete the set from the original dataset.</em></p>
+<blockquote class="blockquote">
+<p>Tell</p>
+</blockquote>
+<p>Explain how much your result changed and whether that changes your interpretation. Support your explanation with the original and recalculated values.</p>
+</section>
+<section id="e.-concluding-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="e.-concluding-thoughts">3e. Concluding thoughts</h3>
+<p>Suppose another student asks:</p>
+<p>“Are sets in this theme similar to most other Lego sets or not?”</p>
+<p>Can your theme mean and standardized difference comparisons in 3c answer that question? Explain why or why not. Name one additional graph or summary statistic that would help you answer it. You do not need to calculate it.</p>
+<p><strong>FINAL WORD COUNT OF Q3 (including only text written as a response, not question text): ______</strong></p>
+</section>
+</section>
+<section id="question-4-your-own-investigation-25-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-4-your-own-investigation-25-points">Question 4: Your own investigation (25 points)</h2>
+<p>Choose a question that you can answer using the LEGO dataset. Your investigation should add something you have not already answered in Questions 1–3. You may build on an earlier finding, explore a different variable, or make a new comparison.</p>
+<p>Keep your investigation focused: answer one main question, then take one small additional step to examine something you notice in your results. Use the statistical methods you have practiced in the previous questions.</p>
+<blockquote class="blockquote">
+<p>Think: Plan your investigation</p>
+</blockquote>
+<p>Complete this section before creating the graph or table for your new investigation. Keep your original prediction when you write your Tell responses.</p>
+<p><strong>What question will you investigate?</strong>: Write one specific question. Identify the variables you will use and which sets or groups you will include.</p>
+<p><strong>What made you choose this question?</strong>: Refer to a specific observation from your earlier work or something you noticed while looking through the dataset. Explain what it made you curious about.</p>
+<p><strong>What do you expect to find?</strong>: Make a prediction and give a brief reason. Your prediction does not need to be correct.</p>
+<p><strong>How will you investigate it?</strong>: Choose a graph or table and explain how it will help you answer your question.</p>
+<blockquote class="blockquote">
+<p>Show: Investigate and take a closer look</p>
+</blockquote>
+<ol type="1">
+<li>Investigate your main question.</li>
+</ol>
+<p>Use <code>filter()</code> if you need to create a subset of the data. Produce an appropriate graph or table, with clear labels.</p>
+<p>Include numerical summaries that help answer your question. For example, you might use medians and IQRs when comparing quantitative variables, or percentages within each group when comparing categorical variables. Report the number of sets used in each group.</p>
+<ol start="2" type="1">
+<li>Choose one small follow-up based on your results.</li>
+</ol>
+<p>Look at your first graph or table and identify something you would like to examine more closely. Introduce your follow-up by completing this statement:</p>
+<p>“I noticed __________ in my results, so I decided to check __________.”</p>
+<p>Choose one additional step. For example, you could:</p>
+<ul>
+<li>Examine the distribution within one group more closely.</li>
+<li>Check whether a comparison gives a similar result when you include only sets from one theme or a clearly defined time period.</li>
+<li>Look up a set with an unusually high or low value and compare it with the median for its group. If you choose this option, report its set_num, name, and the value you are investigating.</li>
+</ul>
+<p>You may choose another small follow-up that fits your question. Show the additional graph, table, or calculation you used and its result.</p>
+<blockquote class="blockquote">
+<p>Tell: Explain what you learned</p>
+</blockquote>
+<p>Answer these questions separately:</p>
+<ul>
+<li>What is your answer to your main question? State your conclusion and support it with at least two specific numbers or clearly identified features from your graph or table.</li>
+<li>How did your results compare with your prediction? Explain what agreed with or differed from your expectation. Refer to a specific result.</li>
+<li>What did your follow-up add? State what you found when you took a closer look. Did you keep your first conclusion, add an exception, or change your conclusion? Explain using evidence from the follow-up. It is acceptable for the follow-up to confirm your first conclusion.</li>
+<li>What is one thing your investigation still leaves unanswered? Write one specific question that your results cannot answer yet. Identify the additional information or comparison you would need to answer it. You do not need to carry out this additional analysis.</li>
+</ul>
+<p><strong>FINAL WORD COUNT OF Q4 (including only text written as a response, not question text): ______</strong></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
