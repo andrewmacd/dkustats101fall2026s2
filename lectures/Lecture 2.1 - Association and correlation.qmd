@@ -243,7 +243,7 @@ kable(
     select(c(price, artist, title, width_cm, height_cm, area_cm2)))
 ```
 
-## Does bed and square feet relationship match expectations?
+## Does height and width relationship match expectations?
 
 -   Not surprisingly, the higher the painting, the wider it (usually) is (positive relationship)
 -   The relationship is fairly linear (form is lineaer)
