@@ -85,7 +85,7 @@ Topics covered:
 
 -   Does correlation imply causation?
 
--   Lecture webpage: Lecture 2.1
+-   Lecture webpage: [Lecture 2.1](lectures/lecture.2.1.html)
 
 ## Lecture 2.2: Simple Linear Regression (Monday, November 9)
 
