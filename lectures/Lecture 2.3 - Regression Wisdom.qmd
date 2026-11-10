@@ -1,7 +1,7 @@
 ---
 title: "Regression Wisdom"
 author: "Professor MacDonald"
-date: "9/9/2026"
+date: "11/11/2026"
 engine: knitr
 format: 
     live-html: 
