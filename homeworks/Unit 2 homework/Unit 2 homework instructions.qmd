@@ -1,0 +1,174 @@
+---
+title: "Unit 2 homework instructions"
+subtitle: "DKU Stats 101 · Fall 2026"
+date: today
+date-format: "MMMM D, YYYY"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    embed-resources: true
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+# Load libraries here
+library(tidyverse)
+
+# Put the code to load your dataset here
+```
+
+![London](london.jpg)
+
+# What can a listing tell you about its nightly price?
+
+AirBnB is a popular platform for finding short-term places to stay as an alternative to hotels. In this assignment, we will focus on the AirBnB market in London. The dataset for this assignment is sourced from user 
+Mohammad Reza Nabizadeh on [Kaggle](https://www.kaggle.com/datasets/mrnabiz/detailed-airbnb-listing-data-london-sep-2022). In reviewing the data, we can quickly see that two London Airbnb listings that can fit the same number of travelers can have very different nightly prices. Each row describes one AirBnB property listing. This assignment asks you to investigate some of the factors that can lead to rental price listing.
+
+# Scoring guide 
+
+## Content
+
+### Length and presentation guidelines
+
+Aim for approximately 2,500–2,800 words of written explanation, with a maximum of 3,000 words for the assignment. There is no minimum length: a shorter response can earn full credit if it answers the questions clearly and supports its conclusions with evidence.
+
+As a guide, allow approximately:
+
+- Question 1: 150 words
+- Question 2: 450 words
+- Question 3: 550 words
+- Question 4: 650 words
+- Question 5: 1000 words
+- Question 6: 300 words
+
+You may redistribute words across questions while staying within the overall limit.
+
+- The word count includes your Think and Tell responses, explanatory sentences in Show, and explanations in captions or tables. It excludes code, numerical table contents, headings, figure labels, and references. Include an approximate word count at the end each question.
+- Write focused responses. Most individual prompts can be answered in one to three sentences. Use specific numbers or features from your displays to support your answer. You do not need to describe every value in a table.
+- Keep the report organized and compact.
+- Retain the question numbers and Think–Show–Tell headings; remove the full assignment instructions.
+- Refer back to earlier tables and figures instead of reproducing them.
+- Keep full dataset printouts, repeated intermediate output, and unused exploratory plots out of the rendered report.
+
+**Your work will be assessed on the accuracy of the analysis, the relevance of the evidence, and the clarity of your reasoning. Additional length or additional displays do not earn additional credit.**
+
+### Technical guidelines
+
+- Make sure your graphs are produced using `ggplot()`, are well labeled, and are easy to read. Using `ggplot()` is a requirement.
+- Make sure your tables are produced with the `kable()` function from the `knitr` package, are well labeled, and are easy to read. You can make your tables prettier with the `kableExtra` package. Using `kable()` is a requirement.
+- Make sure your regression table results are presented neatly using the `modelsummary` package. Using `modelsummary()` is a requirement.
+- **Do not include more advanced statistics or tests beyond what he have learned in class**. If you want to use these kind of tests and are sure you understand how to use them appropriately, you can message or meet with me and explain your reason for wanting to use them and then receive special permission. Otherwise, stick to what we have learned in class!
+- Make sure you do not have anything rendered in your HTML file besides your results and, when asked for by a question, your code. That means no warnings, messages, or other unnecessary output should appear in your final rendered HTML file.
+
+### Homework check: complete Q1 and the Think sections of Q2-Q5 of the homework before Sunday, November 15th at 11:59 pm.
+### Final submission: due Sunday, November 22rd at 11:59 pm. Submit a rendered version of the full homework and also your file from the homework check.
+
+
+# Questions
+
+## Question 1. Setting expectations (15 points, about 150 words)
+
+### Think
+
+Think about your expectations for what determines a rental's listing price. Choose four quantitative predictors relevant to your question. The dataset includes measures such as `accommodates`, `minimum_nights`, and `number_of_reviews`; you can choose others. You may need to do some browsing on AirBnB to examine some of these variables to see what they mean. Think about how you personally would choose an AirBnB property - what features would matter to you? Explain what each variable you choose measures and why you expect it to be related to price. Which relationship do you expect to be strongest? What finding would make you reconsider your expectations?
+
+**Q1 word count** \_\_\_\_\_
+
+## Question 2. Which listings can answer your question? (30 points, about 450 words)
+
+### Think
+
+Which features of the price and predictor distributions would matter for your analysis? Choose displays and summaries that would let you spot them.
+
+### Show
+
+Summarize the response variable and your four predictors. Show their distributions in a compact set of displays. Account for missing values and report how many listings your analysis will use.
+
+### Tell
+
+Identify a feature that matters for your plan. Decide how you will handle it and explain the trade-off. If an unusual listing caught your attention, what evidence supports keeping it, examining it separately, or excluding it?
+
+**Q2 word count** \_\_\_\_\_
+
+## Question 3. Which characteristics track price most closely? (50 points, about 550 words)
+
+### Think
+
+Choose two of your four predictors for a correlation comparison. Why is this pair worth comparing? Predict which has the stronger linear association with price and in which direction each association will run.
+
+### Show
+
+Plot each predictor against price and report both correlations using the same listings. Are the relationships suitable for summarizing with a correlation?
+
+### Tell
+
+Which association is stronger? Support your answer with the correlations and a feature of the plots. Where does a single correlation give a fair account of the pattern, and where might it leave something important out?
+
+**Q3 word count** \_\_\_\_\_
+
+## Question 4. How well can one characteristic predict price? (60 points, about 650 words)
+
+### Think
+
+Plan two separate simple linear regressions, one for each of your other two predictors not used in the previous question. For each predictor, note what values for the slope would indicate to you that the two variables have a meaningful relationship and provide a brief justification. Which model do you expect to fit better, and how will you judge?
+
+### Show
+
+Fit both models on the response variable, price. Present them side by side and show how each fitted line follows the observed prices.
+
+### Tell
+
+Use each slope to estimate the price difference associated with the change you chose. Which model fits better by your criterion? Cite evidence from the plots. Are regression lines a good summary of the relationship or no?
+
+### Think again
+
+Apply the three model-fit diagnostics from class to each model. Identify the finding that matters most to your comparison. If the evidence calls for a revision, show what you changed and how the fit changed.
+
+### Revising conclusions
+
+Would you trust both models equally for the listings you studied? Support your judgment with one specific diagnostic result.
+
+**Q4 word count** \_\_\_\_\_
+
+## Question 5. What changes when you consider several features together? (75 points, about 1000 words)
+
+### Think
+
+Choose one of the two predictors you plan to model in Question 4. How do you expect its slope to change after you account for the other features, and why? Choose an additional listing characteristic that could divide your sample into meaningful groups (i.e. a categorical variable).
+
+### Show
+
+Use `mutate()` and `case_when()` to turn the additional characteristic into a categorical variable with a few interpretable groups. Create two models - one with the four predictor variables together and one that adds the new categorical variable to the model.
+
+### Tell
+
+Briefly interpret your model. Which variables show a *substantively important* relationship with price? How did the slope of variable you selected change when adding the other three variables to the model? How did the model change when adding the categorical variable?
+
+### Think again
+
+Check the regression conditions of the model with the categorical variable and apply the three model-fit diagnostics from class. Use the evidence to decide whether to revise the model. Show the result of any revision.
+
+### Revising conclusions
+
+Summarize your main findings. Which variables 'matter' in predicting price? How did adding additional variables to your model change your conclusions about this? If there were any major differences between the slopes of a variable between models, what does this indicate about the variable? If the slope estimates largely stayed the same, what does that suggest about their relationship to price? What did the grouping or the diagnostics reveal that the earlier analyses missed?
+
+**Q5 word count** \_\_\_\_\_
+
+## Question 6. Final thoughts (20 points, about 300 words)
+
+### Residuals
+
+Make a table of two listings and their key values across a number of variables. Calculate their residual based on your final, revised model with four predictors and a categorical variable. Examine the features of each listing and think about why they likely had a large or small residual.
+
+### Returning to expectations.
+
+Return to your original expectations. Trace one expectation from Question 1 through two pieces of evidence that changed or strengthened your view from your original expectation. Write some notes about what you now consider to be the key determinants of listing price and why.
+
+**Q6 word count** \_\_\_\_\_
